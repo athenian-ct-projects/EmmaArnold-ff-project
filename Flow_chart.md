@@ -31,6 +31,9 @@ if b: say that they lose
 Function F: ask user for what to do next: invest more money reasearch(a) cancel all country to country transportation(b) 
 if a: if r = 10: r = r + 5 and m = m - 5 and x = x + 1 if r < 10: r = r + 2 and m = m - 5
 
+Function G: ask user for what to do next: 
+
+
 
 
 
