@@ -11,12 +11,20 @@ If easy: set x to 2 and y to 0:
 If medium: set x to 1 and y to 2:
 If hard set x to 0 and y to 4: 
 when x >= 5 and y is <= 10: they win
-when y > 10: they lose
+when y >= 10: they lose
 when y > 5: say that the disease is spreading quickly and tell them to be very careful
+m = 10
 
-Function C: ask user for input on what to do first: invest money in reasearch(a) or invest money in buying a fancy car(b):
-if a: r = r + 5 and y = y + 1
-if b: y = y + 2
+Function C: ask user for input on what to do first: invest money in reasearch(a) invest money in buying a fancy car(b):
+if a: r = r + 5 and y = y + 1 and m = m - 5 
+if b: y = y + 2 
+
+Function D: ask the user for input on what to do next: invest more money in reasearch(a) collect a sample of the disease(b):
+if a: r = r + 3 and y = y + 1 and m = m - 5
+if m = 0: say that they are out of money 
+if b: r = r + 5 and y = y + 1 and m = m - 2
+
+Function E: ask the user for what to do next: quarentine the world(a) fly to another planet to escape the disease(b)
 
 
                                                
