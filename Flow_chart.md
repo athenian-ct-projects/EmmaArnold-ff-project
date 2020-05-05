@@ -21,10 +21,15 @@ if b: y = y + 2
 
 Function D: ask the user for input on what to do next: invest more money in reasearch(a) collect a sample of the disease(b):
 if a: r = r + 3 and y = y + 1 and m = m - 5
-if m = 0: say that they are out of money 
+if m = 0: say that they are out of money and x = x + 1 
 if b: r = r + 5 and y = y + 1 and m = m - 2
 
-Function E: ask the user for what to do next: quarentine the world(a) fly to another planet to escape the disease(b)
+Function E: ask the user for what to do next: cancel all flights(a) fly to another planet to escape the disease(b)
+if a: y = y + 1 and x = x + 2 
+if b: say that they lose
+
+Function F: 
+
 
 
                                                
