@@ -1,9 +1,14 @@
 # This game is for epidemic day and is written by EA '23
 def x():
+    print("Hi")
 def a():
+    print("Hi")
 def b():
+    print("Hi")
 def m():
+    print("Hi")
 def r():
+    print("Hi")
 x = 0
 a = 0
 b = 0
@@ -21,6 +26,12 @@ elif x == 2:
     a = a + 1 and b = b + 1 and r = r + 2 and m = m + 12
 elif x == 3: 
     a = a + 2 and m = m + 10
-else:
-    x = input(str("Please enter either 1, 2, or 3: "))
+else: 
+    print("please acutually enter a number from 1 to 3")
+
+first = input(str("What do you want to do next? Buy a fancy car(1) or invest some money in reasearch(2):  "))   
+if first == 1:
+    (r = r + 5) and (y = y + 1) and (m = m - 3) and (x = x + 1)
+if first == 2: 
+    y = y + 2 and m = m - 5 
 
