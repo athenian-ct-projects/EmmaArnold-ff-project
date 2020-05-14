@@ -9,6 +9,8 @@ def m():
     print("Hi")
 def r():
     print("Hi")
+def first():
+    print("hi")
 x = 0
 a = 0
 b = 0
@@ -29,9 +31,25 @@ elif x == 3:
 else: 
     print("please acutually enter a number from 1 to 3")
 
-first = input(str("What do you want to do next? Buy a fancy car(1) or invest some money in reasearch(2):  "))   
+first = input(int("What do you want to do next? Buy a fancy car(1) or invest some money in reasearch(2):  "))   
 if first == 1:
-    (r = r + 5) and (y = y + 1) and (m = m - 3) and (x = x + 1)
-if first == 2: 
-    y = y + 2 and m = m - 5 
+    (r = r + 5) and (a = a + 1) and (m = m - 3) and (x = x + 1)
+elif first == 2: 
+    a = a + 2 and m = m - 5 
+    print ("next time, please enter either 1 or 2 please")
+    break 
+second = input(int("Next, do you want to invest more money in reasearch(1) or hold an international hugging day(2): "))
+if second == 1:
+    (r = r + 5) and (a = a + 1) and (m = m - 3) and (x = x + 1)
+elif second == 2: 
+    a = a + 3 
+else: 
+    print ("next time, please enter either 1 or 2 please")
+    break 
+third = input(int("Next, do you want to cancel all flights and sea transportation(1) or fly to mars to escape the disease(2): "))
+if third == 1:
+    a = a - 1 
+elif third == 2:
+    print("Your goal was to save the world not yourself! Without you there to help save the world, the world falls into anarchy and everyone dies.")
+    break 
 
