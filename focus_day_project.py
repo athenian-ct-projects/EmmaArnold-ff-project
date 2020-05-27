@@ -49,21 +49,23 @@ elif x == 3:
     a = a + 3 
     m = m + 10        #less money, less cure progress, and more disease spread
 else: 
-    print("please acutually enter a number from 1 to 3")    #if they dont enter a number from 1 to 3 the game ends
-    
+    print("Please acutually enter a number from 1 to 3")    #if they dont enter a number from 1 to 3 the game ends
+    exit()
 
 first = int(input("The disease is spreading around the world and you need to make a decision on what to do. Do you want to buy a fancy car(1) or invest some money in reasearch(2):  "))
 if first == 1:
     a = a + 2 
     m = m - 5    #spread goes up, money goes way down 
+    print("The spread is" ,a, "yay")
 elif first == 2: 
     r = r + 5 
     a = a + 1 
     m = m - 3 
     b = b + 1
+    print("The spread is" ,a, "yay")
 else: 
-    print("next time, please enter either 1 or 2 please")      #if number is not 1 or 2, the game ends(maybe try to find another way to do this)
-    
+    print("Next time, please enter either 1 or 2")      #if number is not 1 or 2, the game ends(maybe try to find another way to do this)
+    exit()
 
 second = int(input("Next, do you want to invest more money in reasearch(1) or hold an international hugging day(2): "))
 if second == 1:
@@ -71,28 +73,50 @@ if second == 1:
     a = a + 1 
     m = m - 3 
     b = b + 1    
+    print("The spread is" ,a, "yay") 
 elif second == 2: 
-    a = a + 3    #spread goes way up, and on hard difficulty, game ends
+    a = a + 3  
+    print("The spread is" ,a, "yay")       #when disease spread gets too high, the game ends
+    if a >= 7:      
+        print("You lose. The disease spreads across the entire world and everyone dies. ")   
+        exit()   
+    
 else: 
-    print ("next time, please enter either 1 or 2 please")
+    print("Next time, please enter either 1 or 2")
+    exit()
     
 third = int(input("Next, do you want to cancel all flights(1) or fly to mars to escape the disease(2): "))
 if third == 1:
-    a = a - 1        # the disease spread is going down
+    a = a + 1        # the disease spread is going down
+    if a >= 7:      
+        print("You lose. The disease spreads across the entire world and everyone dies. ")   
+        exit()   
+
 elif third == 2:      #if this one is chosen, game ends
     print("Your goal was to save the world not yourself! Without you there to help save the world, the world falls into anarchy and everyone dies.")
     exit()
-    
+else:
+    print("Next time, please enter either 1 or 2") 
 fourth = int(input("Next, do you want to get a sample of the disease to help further develop a cure(1) or do you want to cancel all country to country transportation(2): "))
 if fourth == 1:        #first question that requires some brain power
     b = b + 2           
+    a = a + 1
+    if a >= 7:      
+        print("You lose. The disease spreads across the entire world and everyone dies. ")   
+        exit()   
+
 elif fourth == 2:         # sample of disease helps cure go up, canceling transportation helps spread go down
     a = a - 1           # 1 is to try and end the game quickly, 2 is a slow approach
+
+else:
+    print("Next time, please enter either 1 or 2")
+    exit()
 fifth = int(input("You are doing well so far, there is still a chance to save the world. However things are only going to get harder from here. Now do you want to take a slow approach to this situation and invest some time and money in trying and find a cure for the disease(1) or do you want to slow down the spread of the disease by quarentining everyone(2):  "))
 if fifth == 1: 
     b = b + 3 
     a = a + 2 
     m = m - 5
+    print("The spread is" ,a, "yay") 
 elif fifth == 2:
     h = h - 5 
     print("You have slowed down the spread of the disease a lot, however the civilians are not pleased with you, so please take this into account when making further decisions")
@@ -101,5 +125,10 @@ elif fifth == 2:
         m = m - 10
     if sixth == 2: 
         a = a + 2
+        print("The spread is" ,a, "yay") 
+else: 
+    print("Next time, please enter either 1 or 2")
+    exit()
+    
 
     
