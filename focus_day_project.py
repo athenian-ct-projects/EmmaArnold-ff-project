@@ -19,6 +19,12 @@ def third():
     print("Hi")
 def fourth():
     print("Hi")
+def fifth():
+    print("Hi")
+def sixth():
+    print("Hi")
+def seventh(): 
+    print("Hi")
 x = 0
 a = 0
 b = 0
@@ -29,11 +35,12 @@ first = 0
 second = 0 
 third = 0 
 fourth = 0
-if r >= 5: 
-    print("Through your reasearch, we have been able to learn a bit more about this disease. It is a very contagious disease, however it is not really deadly.")
-while a >= 7:      #when disease spread gets too high, the game ends
-    print("You lost. The disease spread across the entire world and everyone died. ")   
-    exit() 
+fifth = 0
+sixth = 0
+seventh = 0
+for x in range (5, 0, -1):
+    print("The game will start in" ,str(x), "seconds")
+x = 0
 # x is the difficulty level, a is the spread of the disease, b is the cure, m is the amount of money they have, and r is the reasearch
 x = int(input("Hello and welcome to my game. There is a deadly disease spreading all throughout the world, and it is your job to stop it. You will be asked various questions, and you will answer them based on your knowledge. Please enter your difficulty level. 1 is easy, 2 is medium, 3 is hard:  "))
 if x == 1: 
@@ -41,12 +48,12 @@ if x == 1:
     r = r + 4 
     m = m + 15    #more money and cure progress and less disease spread
 elif x == 2:
-    a = a + 2 
+    a = a + 1
     b = b + 1 
     r = r + 2 
     m = m + 12    
 elif x == 3: 
-    a = a + 3 
+    a = a + 2
     m = m + 10        #less money, less cure progress, and more disease spread
 else: 
     print("Please acutually enter a number from 1 to 3")    #if they dont enter a number from 1 to 3 the game ends
@@ -104,6 +111,9 @@ if fourth == 1:        #first question that requires some brain power
     if a >= 7:      
         print("You lose. The disease spreads across the entire world and everyone dies. ")   
         exit()   
+    if b >= 5:
+        print("You have finished the cure, and it has been deployed to everyone in the world. Everyone was sucessfully cured, and you were able to save the world. Congratulations!")
+        exit()
 
 elif fourth == 2:         # sample of disease helps cure go up, canceling transportation helps spread go down
     a = a - 1           # 1 is to try and end the game quickly, 2 is a slow approach
@@ -116,19 +126,28 @@ if fifth == 1:
     b = b + 3 
     a = a + 2 
     m = m - 5
-    print("The spread is" ,a, "yay") 
+    if b >= 5:
+        print("The cure has been finished and it has been deployed to everyone in the world. Everyone was sucessfully cured, and you were able to save the world. Congratulations!")
+        exit()
 elif fifth == 2:
     h = h - 5 
     print("You have slowed down the spread of the disease a lot, however the civilians are not pleased with you, so please take this into account when making further decisions")
     sixth = int(input("A lot of people aren't able to feed their families now because they aren't able to go to work now. Do you want to give people stimulus checks(1) or stop the quarentine and just tell people to be more careful and weary(2):  "))
     if sixth == 1:
         m = m - 10
+        if m <= -5:
+            print("You have put the government majorly in debt. You have been removed from office, and without you to help, the disease spreads across the world, and eventually kills off humanity. Better luck next time.")
+            exit()
     if sixth == 2: 
         a = a + 2
-        print("The spread is" ,a, "yay") 
 else: 
     print("Next time, please enter either 1 or 2")
     exit()
-    
+seventh = int(input("Now you have to make a very tough decision. Do you want to fully invest in the cure(1) or do you want to make sure that the disease spread is slowed by issuing a stay at home notice(2)?: "))
+if seventh == 1:
+    print("The cure has been finished and it has been deployed to everyone in the world. Everyone was sucessfully cured, and you were able to save the world. Congratulations!")
+    exit()
 
-    
+if seventh == 2:
+    print("You lose. Even though people were supposed to stay at home, a lot of them didn't follow orders, and the super contagious disease was able to spread across the world, and kill off humanity")  
+    exit()
