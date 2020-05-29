@@ -28,6 +28,7 @@ def seventh():
 def invalidnumber():
     print("Next time, please enter either 1 or 2")      #if number is not 1 or 2, the game ends
     exit()
+    
 x = 0
 a = 0
 b = 0
