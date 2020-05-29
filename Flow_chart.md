@@ -35,7 +35,14 @@ if a: if r = 10: r = r + 5 and m = m - 5 and x = x + 1 if r < 10: r = r + 2 and 
 
 Function G: ask user for what to do next: Invest in the cure(1) or quarentine everyone(2):
 if 1: m = m - 5, x = x + 3
-if 2: 
+if 2: Function H: deploy stimulus checks(1) or stop quarentine and tell people to be careful(2):
+          if 1: game ends, they are in debt
+          if 2: y = y + 1
+          
+Function I: Do you want to focus on cure(1), or stay at home notice(2):
+if 1: they win, disease was cured
+if 2: they lose, disease spread to everyone, and humanity was killed off
+
   
 
 
